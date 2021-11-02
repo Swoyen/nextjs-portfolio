@@ -1,19 +1,25 @@
-import React from 'react';
+import React from "react";
 
-import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
-import { Box, Boxes, BoxNum, BoxText } from './AcomplishmentsStyles';
+import {
+  Section,
+  SectionDivider,
+  SectionTitle,
+} from "../../styles/GlobalComponents";
+import { Box, Boxes, BoxNum, BoxText } from "./AcomplishmentsStyles";
+import { accomplishments } from "../../constants/constants";
 
-const data = [
-  { number: 20, text: 'Open Source Projects'},
-  { number: 1000, text: 'Students', },
-  { number: 1900, text: 'Github Followers', },
-  { number: 5000, text: 'Github Stars', }
-];
-
-const Acomplishments = () => (
-  <div>
-    Acomplishments
-  </div>
+const Accomplishments = () => (
+  <Section>
+    <SectionTitle>Accomplishments</SectionTitle>
+    <Boxes>
+      {accomplishments.map(({ number, text }, i) => (
+        <Box key={i}>
+          <BoxNum>{number}</BoxNum>
+          <BoxText>{text}</BoxText>
+        </Box>
+      ))}
+    </Boxes>
+  </Section>
 );
 
-export default Acomplishments;
+export default Accomplishments;

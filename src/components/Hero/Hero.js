@@ -1,4 +1,6 @@
 import React from "react";
+import { AiOutlineArrowDown } from "react-icons/ai";
+import Link from "next/link";
 
 import {
   Section,
@@ -7,6 +9,7 @@ import {
 } from "../../styles/GlobalComponents";
 import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
+import LinkButton from "../../styles/GlobalComponents/LinkButton";
 
 const Hero = (props) => (
   <Section row nopadding>
@@ -16,13 +19,20 @@ const Hero = (props) => (
         My Personal Portfolio
       </SectionTitle>
       <SectionText>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
-        doloremque odio dolorum ad, explicabo aperiam totam assumenda beatae
-        itaque voluptates.
+        My name is Swoyen. I am an aspiring web developer based in Adelaide. I
+        am open for new opportunities and software projects.
       </SectionText>
-      <Button onClick={() => (window.location = "https://google.com")}>
-        Learn More
-      </Button>
+      {/* <Link href="#contact" passHref>
+        <Button>
+          
+        </Button>
+      </Link> */}
+      <Link href="#contact" passHref>
+        <LinkButton>
+          <AiOutlineArrowDown />
+          <span style={{ marginLeft: "5px" }}>Contact me</span>
+        </LinkButton>
+      </Link>
     </LeftSection>
   </Section>
 );

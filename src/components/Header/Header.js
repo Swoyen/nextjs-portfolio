@@ -26,7 +26,7 @@ const Header = () => (
           }}
           href=""
         >
-          <DiCssdeck size="3rem" /> <Brand>Portfolio</Brand>
+          <DiCssdeck size="3rem" /> <Brand>Swoyen</Brand>
         </a>
       </Link>
     </Div1>
@@ -46,12 +46,23 @@ const Header = () => (
           <NavLink>About</NavLink>
         </Link>
       </li>
+      <li>
+        <Link href="#contact">
+          <NavLink>Contact</NavLink>
+        </Link>
+      </li>
     </Div2>
     <Div3>
-      <SocialIcons href="https://https:github.com">
+      <SocialIcons
+        onClick={() => window.open("https://github.com/Swoyen", "_blank")}
+      >
         <AiFillGithub size="3rem" />
       </SocialIcons>
-      <SocialIcons href="https://https:linkedin.com">
+      <SocialIcons
+        onClick={() =>
+          window.open("https://www.linkedin.com/in/Swoyen", "_blank")
+        }
+      >
         <AiFillLinkedin size="3rem" />
       </SocialIcons>
     </Div3>

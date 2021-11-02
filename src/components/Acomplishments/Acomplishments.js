@@ -10,6 +10,8 @@ import { accomplishments } from "../../constants/constants";
 
 const Accomplishments = () => (
   <Section>
+    <SectionDivider />
+    <br />
     <SectionTitle>Accomplishments</SectionTitle>
     <Boxes>
       {accomplishments.map(({ number, text }, i) => (

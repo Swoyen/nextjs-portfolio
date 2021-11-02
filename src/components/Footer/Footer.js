@@ -1,5 +1,6 @@
 import React from "react";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
+import { IoMdOpen } from "react-icons/io";
 
 import { SocialIcons } from "../Header/HeaderStyles";
 import {
@@ -12,15 +13,15 @@ import {
   Slogan,
   SocialContainer,
   SocialIconsContainer,
+  SourceLink,
 } from "./FooterStyles";
-
 const Footer = () => {
   return (
     <FooterWrapper>
       <LinkList>
         <LinkColumn>
           <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel:111-111-1111">111-111-1111</LinkItem>
+          <LinkItem href="tel:0424-076-095">+61 0424-076-095</LinkItem>
         </LinkColumn>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
@@ -31,12 +32,20 @@ const Footer = () => {
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>This is a slogan?</Slogan>
+          <Slogan>
+            Made with React and NextJS.
+            <SourceLink
+              href="https://www.github.com/Swoyen/nextjs-portfolio"
+              target="_blank"
+            >
+              View Source. <IoMdOpen size="2rem" />
+            </SourceLink>
+          </Slogan>
         </CompanyContainer>
-        <SocialIcons href="https://https:github.com">
+        <SocialIcons href="https://github.com/swoyen" target="_blank">
           <AiFillGithub size="3rem" />
         </SocialIcons>
-        <SocialIcons href="https://https:linkedin.com">
+        <SocialIcons href="https://linkedin.com/in/swoyen" target="_blank">
           <AiFillLinkedin size="3rem" />
         </SocialIcons>
       </SocialIconsContainer>

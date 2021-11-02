@@ -1,56 +1,110 @@
 import React from "react";
 import { DiFirebase, DiReact, DiZend } from "react-icons/di";
+
+import {
+  SiNextDotJs,
+  SiVueDotJs,
+  SiDotNet,
+  SiLaravel,
+  SiMysql,
+  SiGithub,
+  SiUnity,
+  SiPython,
+} from "react-icons/si";
 import {
   Section,
   SectionDivider,
   SectionText,
   SectionTitle,
+  SubSectionDivider,
 } from "../../styles/GlobalComponents";
 import {
   List,
   ListContainer,
+  ListIcon,
+  ListIcons,
   ListItem,
   ListParagraph,
   ListTitle,
 } from "./TechnologiesStyles";
 
 const Technologies = () => (
-  <Section id="tech">
+  <Section id="technologies">
     <SectionDivider />
     <br />
     <SectionTitle>Technologies</SectionTitle>
     <SectionText>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aliquam
-      laborum praesentium
+      I've learned these through personal projects and my employment.
     </SectionText>
     <List>
       <ListItem>
-        <DiReact size="3rem" />
+        <ListIcons>
+          <ListIcon>
+            <DiReact size="4rem" />
+          </ListIcon>
+          <ListIcon>
+            <SiNextDotJs size="4rem" />
+          </ListIcon>
+          <ListIcon>
+            <SiVueDotJs size="4rem" />
+          </ListIcon>
+        </ListIcons>
         <ListContainer>
           <ListTitle>Front-End</ListTitle>
+          <SubSectionDivider />
           <ListParagraph>
-            Experience with <br />
-            React.js
+            React.js <br />
+            Next.js
+            <br /> Vue <br />
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
-        <DiFirebase size="3rem" />
+        <ListIcons>
+          <ListIcon>
+            <SiDotNet size="4rem" />
+          </ListIcon>
+          <ListIcon>
+            <SiLaravel size="4rem" />
+          </ListIcon>
+          <ListIcon>
+            <SiMysql size="4rem" />
+          </ListIcon>
+        </ListIcons>
+
         <ListContainer>
           <ListTitle>Back-End</ListTitle>
+          <SubSectionDivider />
           <ListParagraph>
-            Experience with <br />
-            Node and Database
+            .NET Core <br />
+            Entity Framework <br />
+            Laravel <br />
+            SQL <br />
+            MySQL
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
-        <DiZend size="3rem" />
+        <ListIcons>
+          <ListIcon>
+            <SiGithub size="4rem" />
+          </ListIcon>
+          <ListIcon>
+            <SiUnity size="4rem" />
+          </ListIcon>
+          <ListIcon>
+            <SiPython size="4rem" />
+          </ListIcon>
+        </ListIcons>
         <ListContainer>
-          <ListTitle>UI/UX</ListTitle>
+          <ListTitle>Tools / Software</ListTitle>
+          <SubSectionDivider />
           <ListParagraph>
-            Experience with <br />
-            Node and Database
+            Git <br />
+            Unity <br />
+            C# <br />
+            Java <br />
+            Python
           </ListParagraph>
         </ListContainer>
       </ListItem>

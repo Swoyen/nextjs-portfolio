@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   BlogCard,
@@ -12,6 +12,9 @@ import {
   TitleContent,
   UtilityList,
   Img,
+  CloseButton,
+  ModalShowButton,
+  InProgress,
 } from "./ProjectsStyles";
 import {
   Section,
@@ -19,38 +22,108 @@ import {
   SectionTitle,
 } from "../../styles/GlobalComponents";
 import { projects } from "../../constants/constants";
+import Modal from "react-modal";
+import { BsCode } from "react-icons/bs";
+import { MdWeb } from "react-icons/md";
+import { RiBookOpenLine } from "react-icons/ri";
+import Loader from "react-loader-spinner";
 
-const Projects = () => (
-  <Section nopadding id="projects">
-    <SectionDivider />
-    <SectionTitle main>Projects </SectionTitle>
-    <GridContainer>
-      {projects.map(
-        ({ id, image, title, description, tags, source, visit }) => (
-          <BlogCard key={id}>
-            <Img src={image} />
-            <TitleContent>
-              <HeaderThree isTitle>{title}</HeaderThree>
-              <Hr />
-            </TitleContent>
-            <CardInfo>{description}</CardInfo> <Hr />
-            <div>
-              <TitleContent>Stack</TitleContent>
-              <TagList>
-                {tags.map((tag, i) => (
-                  <Tag key={i}>{tag}</Tag>
-                ))}
-              </TagList>
-            </div>
-            <UtilityList>
-              <ExternalLinks href={visit}>Code</ExternalLinks>
-              <ExternalLinks href={source}>Source</ExternalLinks>
-            </UtilityList>
-          </BlogCard>
-        )
-      )}
-    </GridContainer>
-  </Section>
-);
+Modal.setAppElement("#__next");
 
+const Projects = () => {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [project, setProject] = useState(null);
+
+  const openModal = (project) => {
+    setProject(project);
+    setIsOpen(true);
+  };
+
+  const disableScroll = () => {
+    // document.body.classList.add("stop-scrolling");
+  };
+
+  const enableScroll = () => {
+    //   document.body.classList.remove("stop-scrolling");
+  };
+
+  const afterOpenModal = () => {
+    disableScroll();
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    enableScroll();
+  };
+
+  return (
+    <>
+      <Modal
+        class
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+      >
+        <HeaderThree isTitle>{project?.title}</HeaderThree>
+        <p>{project?.description}</p>
+        <CloseButton
+          onClick={() => closeModal()}
+          style
+          size="3rem"
+        ></CloseButton>
+      </Modal>
+      <Section id="projects">
+        <SectionDivider />
+        <SectionTitle main>Projects </SectionTitle>
+        <GridContainer>
+          {projects.map((project) => (
+            <BlogCard key={project.id}>
+              <Img src={project.image} />
+              <TitleContent>
+                <HeaderThree isTitle>{project.title}</HeaderThree>
+                <Hr />
+              </TitleContent>
+              {/* <CardInfo>{description}</CardInfo> <Hr /> */}
+              <div>
+                <TitleContent>Stack</TitleContent>
+                <TagList>
+                  {project.tags.map((tag, i) => (
+                    <Tag key={i}>{tag}</Tag>
+                  ))}
+                </TagList>
+              </div>
+              {project.status === "inProgress" ? (
+                <InProgress>
+                  In-Progress
+                  <Loader
+                    type="ThreeDots"
+                    color="#00BFFF"
+                    height={50}
+                    width={50}
+                  />
+                </InProgress>
+              ) : (
+                <UtilityList>
+                  <ExternalLinks href={project.source} target="_blank">
+                    <BsCode size="1.5rem" />
+                    <span style={{ marginLeft: "5px" }}>Code</span>
+                  </ExternalLinks>
+                  <ExternalLinks href={project.visit} target="_blank">
+                    <MdWeb />
+                    <span style={{ marginLeft: "5px" }}>Website</span>
+                  </ExternalLinks>
+                  <ModalShowButton onClick={() => openModal(project)}>
+                    <RiBookOpenLine />
+                    <span style={{ marginLeft: "5px" }}>Read More</span>
+                  </ModalShowButton>
+                </UtilityList>
+              )}
+            </BlogCard>
+          ))}
+        </GridContainer>
+      </Section>
+    </>
+  );
+};
 export default Projects;

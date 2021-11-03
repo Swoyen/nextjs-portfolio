@@ -124,4 +124,7 @@ export const SocialIcons = styled.a`
     transform: scale(1.2);
     cursor: pointer;
   }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 45px;
+  }
 `;

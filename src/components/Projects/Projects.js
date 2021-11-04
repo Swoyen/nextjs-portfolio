@@ -41,11 +41,11 @@ const Projects = () => {
   };
 
   const disableScroll = () => {
-    // document.body.classList.add("stop-scrolling");
+    document.body.classList.add("stop-scrolling");
   };
 
   const enableScroll = () => {
-    //   document.body.classList.remove("stop-scrolling");
+    document.body.classList.remove("stop-scrolling");
   };
 
   const afterOpenModal = () => {

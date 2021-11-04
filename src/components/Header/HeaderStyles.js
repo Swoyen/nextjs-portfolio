@@ -9,12 +9,13 @@ export const Container = styled.div`
   padding: 1rem;
   padding-top: 2rem;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+  @media ${(props) => props.theme.breakpoints.lg} {
+    display: flex;
+    /* grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 60px);
     grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+    grid-row-gap: 0.5rem; */
+    justify-content: space-between;
   }
 `;
 
@@ -35,8 +36,9 @@ export const Div2 = styled.div`
   grid-area: 1 / 2 / 2 / 4;
   display: flex;
   justify-content: space-around;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 2 / 3 / 5;
+  @media ${(props) => props.theme.breakpoints.lg} {
+    /* grid-area: 2 / 2 / 3 / 5; */
+    display: none;
   }
 `;
 export const Div3 = styled.div`
@@ -44,9 +46,10 @@ export const Div3 = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    align-items: center;
-    grid-area: 1 / 4 / 2 / 6;
+  @media ${(props) => props.theme.breakpoints.lg} {
+    /* align-items: center;
+    grid-area: 1 / 4 / 2 / 6; */
+    display: none;
   }
 `;
 

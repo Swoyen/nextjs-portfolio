@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Bug Tracker",
     description:
-      "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
+      "This application was created with the purpose of integrating issue tracking with time management. This is a full stack application with both the front end and back end secured with MSAL(Micrsoft Authentication Library).",
     image: "/images/BugTracker.png",
     tags: ["React", ".NET Core", "AWS", "Azure MSAL"],
     source: "https://github.com/Swoyen/bug-tracker",
@@ -34,7 +34,7 @@ export const projects = [
   {
     title: "Portfolio v1",
     description:
-      "This is a code repository for the corresponding video tutorial. In this video, we will create a full Realtime Chat Application",
+      "This is my first portfolio built with plain HTML and CSS. The animations are handwritten and I think they're good. So Check it out.",
     image: "/images/PortfolioV1.png",
     tags: ["HTML", "CSS", "JavaScript"],
     source: "https://github.com/Swoyen/Portfolio",

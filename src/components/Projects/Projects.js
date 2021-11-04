@@ -15,6 +15,7 @@ import {
   CloseButton,
   ModalShowButton,
   InProgress,
+  LinkSpan,
 } from "./ProjectsStyles";
 import {
   Section,
@@ -106,16 +107,16 @@ const Projects = () => {
               ) : (
                 <UtilityList>
                   <ExternalLinks href={project.source} target="_blank">
-                    <BsCode size="1.5rem" />
-                    <span style={{ marginLeft: "5px" }}>Code</span>
+                    <BsCode style={{ flex: "auto" }} size="1.5rem" />
+                    <LinkSpan>View Code</LinkSpan>
                   </ExternalLinks>
                   <ExternalLinks href={project.visit} target="_blank">
                     <MdWeb />
-                    <span style={{ marginLeft: "5px" }}>Website</span>
+                    <LinkSpan>Website</LinkSpan>
                   </ExternalLinks>
                   <ModalShowButton onClick={() => openModal(project)}>
                     <RiBookOpenLine />
-                    <span style={{ marginLeft: "5px" }}>Read More</span>
+                    <LinkSpan>Details</LinkSpan>
                   </ModalShowButton>
                 </UtilityList>
               )}

@@ -26,7 +26,7 @@ import {
 import Button from "../../styles/GlobalComponents/Button";
 const VTimeLine = () => {
   return (
-    <Section id="timeline">
+    <Section id="about">
       <SectionDivider />
       <br />
       <SectionTitle>About Me</SectionTitle>
@@ -44,7 +44,7 @@ const VTimeLine = () => {
               color: "#fff",
               borderRadius: "30px",
               border: "0px solid black",
-              boxShadow: "0px 0px 10px #888888",
+              boxShadow: "0px 0px 10px rgba(255,255,255,0.2)",
             }}
             dateClassName="timeLineDate"
             contentArrowStyle={{
@@ -92,7 +92,9 @@ const VTimeLine = () => {
       </VerticalTimeline>
       <Button
         style={{ marginTop: "20px" }}
-        onClick={() => window.open("/files/Resume.pdf", "_blank").focus()}
+        onClick={() =>
+          window.open("/files/Resume Swoyen Suwal.pdf", "_blank").focus()
+        }
       >
         <AiOutlineDownload />
         <span style={{ marginLeft: "5px" }}> Resume</span>

@@ -6,23 +6,26 @@ import Projects from "../components/Projects/Projects";
 import Technologies from "../components/Technologies/Technologies";
 import Timeline from "../components/TimeLine/TimeLine";
 import VTimeLine from "../components/VTimeLine/VTimeLine";
+import { SideBarProvider } from "../context/SideBarContext";
 import { Layout } from "../layout/Layout";
 import { Section } from "../styles/GlobalComponents";
 
 const Home = () => {
   return (
-    <Layout>
-      <Section grid>
-        <Hero />
-        <BgAnimation />
-      </Section>
-      <Projects />
-      <Technologies />
-      {/* <Timeline /> */}
-      <VTimeLine />
-      {/* <Acomplishments /> */}
-      <Contact />
-    </Layout>
+    <SideBarProvider>
+      <Layout>
+        <Section grid>
+          <Hero />
+          <BgAnimation />
+        </Section>
+        <Projects />
+        <Technologies />
+        {/* <Timeline /> */}
+        <VTimeLine />
+        {/* <Acomplishments /> */}
+        <Contact />
+      </Layout>
+    </SideBarProvider>
   );
 };
 

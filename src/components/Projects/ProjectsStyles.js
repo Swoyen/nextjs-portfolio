@@ -96,8 +96,24 @@ export const ExternalLinks = styled.a`
   border-radius: 30px;
   transition: 0.5s;
   opacity: 0.9;
+  display: flex;
   &:hover {
     opacity: 1;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+export const LinkSpan = styled.span`
+  margin-left: 5px;
+  flex: auto;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    margin-left: 0;
   }
 `;
 
@@ -110,8 +126,15 @@ export const ModalShowButton = styled.button`
   background: linear-gradient(270deg, #13adc7 0%, #945dd6 90%);
   border-radius: 30px;
   transition: 0.5s;
+  display: flex;
   &:hover {
     background: linear-gradient(270deg, #13adc7 0%, #945dd6 100%);
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -127,23 +150,35 @@ export const Tag = styled.li`
   font-size: 1.5rem;
 `;
 
+// export const CloseButton = styled(AiOutlineClose)`
+//   color: white;
+//   background: black;
+//   border-radius: 50%;
+//   padding: 5px;
+//   position: fixed;
+//   top: 5px;
+//   right: 5px;
+//   cursor: pointer;
+//   &:hover {
+//     background: gray;
+//   }
+//   @media ${(props) => props.theme.breakpoints.sm} {
+//     padding: 1rem;
+//   }
+//   @media ${(props) => props.theme.breakpoints.sm} {
+//     padding: 1rem;
+//   }
+// `;
 export const CloseButton = styled(AiOutlineClose)`
-  color: white;
+  position: absolute;
   background: black;
-  border-radius: 50%;
-  padding: 5px;
-  position: fixed;
-  top: 5px;
-  right: 5px;
   cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  right: 5px;
+  top: 5px;
   &:hover {
     background: gray;
-  }
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 1rem;
-  }
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 1rem;
   }
 `;
 

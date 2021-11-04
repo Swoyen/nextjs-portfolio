@@ -15,6 +15,9 @@ export const TimeLineContent = styled.div`
 export const TimeLineParagraph = styled.div`
   display: flex;
   margin: 10px 0;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    flex-direction: column;
+  }
 `;
 
 export const TimeLineParagraphContent = styled.div`

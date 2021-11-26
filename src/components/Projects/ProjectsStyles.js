@@ -1,12 +1,20 @@
 import { AiOutlineClose } from "react-icons/ai";
 import styled from "styled-components";
-import Modal from "react-modal";
 
 export const Img = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.5s;
   overflow: hidden;
+`;
+
+export const ImgContainer = styled.div`
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  opacity: 0.9;
 `;
 
 export const GridContainer = styled.section`
@@ -30,6 +38,17 @@ export const BlogCard = styled.div`
   box-shadow: 0px 0px 10px rgba(80, 78, 78, 0.5);
   text-align: center;
   width: 400px;
+  transition: all 0.5s;
+  :hover {
+    box-shadow: 0px 0px 20px rgba(80, 78, 78, 1);
+    transition: all 0.5s;
+  }
+
+  :hover ${Img} {
+    width: 110%;
+    height: 110%;
+    transition: all 0.5s;
+  }
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }

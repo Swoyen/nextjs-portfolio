@@ -16,6 +16,7 @@ import {
   ModalShowButton,
   InProgress,
   LinkSpan,
+  ImgContainer,
 } from "./ProjectsStyles";
 import {
   Section,
@@ -80,7 +81,10 @@ const Projects = () => {
         <GridContainer>
           {projects.map((project) => (
             <BlogCard key={project.id}>
-              <Img src={project.image} />
+              <ImgContainer>
+                <Img src={project.image} />
+              </ImgContainer>
+
               <TitleContent>
                 <HeaderThree isTitle>{project.title}</HeaderThree>
                 <Hr />

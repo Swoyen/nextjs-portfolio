@@ -1,5 +1,5 @@
 import { AiOutlineClose } from "react-icons/ai";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Img = styled.img`
   width: 100%;
@@ -31,6 +31,56 @@ export const GridContainer = styled.section`
     padding-bottom: 0;
   }
 `;
+
+const steam = keyframes` 
+ 0% {
+  background-position: 0 0;
+}
+50% {
+  background-position: 400% 0;
+}
+100% {
+  background-position: 0 0;
+}`;
+
+export const CardBorder = styled.div`
+  position: relative;
+  /* margin: 300px auto 0;
+  width: 500px;
+  height: 250px; */
+  background: linear-gradient(0deg, #000, #272727);
+  border-radius: 15px;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      45deg,
+      #fb0094,
+      #0000ff,
+      #00ff00,
+      #ffff00,
+      #ff0000,
+      #fb0094,
+      #0000ff,
+      #00ff00,
+      #ffff00,
+      #ff0000
+    );
+    background-size: 400%;
+    width: calc(96%);
+    top: calc(2%);
+    left: calc(2%);
+    height: calc(96%);
+    z-index: -1;
+    animation: ${steam} 20s linear infinite;
+  }
+
+  &:after {
+    filter: blur(60px);
+  }
+`;
+
 export const BlogCard = styled.div`
   background: #212d45;
   border-radius: 15px;

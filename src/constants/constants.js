@@ -1,5 +1,16 @@
 export const projects = [
   {
+    title: "Game Store",
+    description:
+      "While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
+    image: "/images/GameStore.png",
+    tags: ["NextJS", "ReactJS", "JavaScript", "MongoDB"],
+    source: "https://github.com/Swoyen/nextjs-acquire",
+    visit: "https://nextjs-acquire.vercel.app",
+    id: 1,
+    important: true,
+  },
+  {
     title: "Bug Tracker",
     description:
       "This application was created with the purpose of integrating issue tracking with time management. This is a full stack application with both the front end and back end secured with MSAL(Micrsoft Authentication Library).",
@@ -9,16 +20,7 @@ export const projects = [
     visit: "https://bugissuetracker.netlify.app/",
     id: 0,
   },
-  {
-    title: "Game Store",
-    description:
-      "While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
-    image: "/images/GameStore.png",
-    tags: ["NextJS", "ReactJS", "JavaScript", "MongoDB"],
-    source: "https://github.com/Swoyen/nextjs-acquire",
-    visit: "https://nextjs-acquire.vercel.app",
-    id: 1,
-  },
+
   {
     title: "Covid Tracker",
     description:

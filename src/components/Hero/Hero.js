@@ -19,8 +19,8 @@ const Hero = (props) => (
         My Personal Portfolio
       </SectionTitle>
       <SectionText>
-        My name is Swoyen. I am an aspiring web developer based in Adelaide. I
-        am open for new opportunities and software projects.
+        My name is Swoyen. I am a software developer based in Adelaide. I am
+        open for new opportunities and software projects.
       </SectionText>
       {/* <Link href="#contact" passHref>
         <Button>

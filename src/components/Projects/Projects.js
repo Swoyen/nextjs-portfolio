@@ -33,7 +33,7 @@ import Loader from "react-loader-spinner";
 
 Modal.setAppElement("#__next");
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, openModal }) => {
   return (
     project && (
       <BlogCard key={project.id}>
@@ -134,10 +134,14 @@ const Projects = () => {
           {projects.map((project) => {
             return project.important ? (
               <Border key={project.id}>
-                <ProjectCard project={project} />
+                <ProjectCard project={project} openModal={openModal} />
               </Border>
             ) : (
-              <ProjectCard key={project.id} project={project}></ProjectCard>
+              <ProjectCard
+                key={project.id}
+                project={project}
+                openModal={openModal}
+              ></ProjectCard>
             );
           })}
         </GridContainer>

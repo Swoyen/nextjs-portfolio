@@ -2,13 +2,22 @@ export const projects = [
   {
     title: "Game Store",
     description:
-      "While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
+      "Game store built using NextJS. Server generated pages for SEO. Stripe for payment processing(don't worry it doesn't cost anything). Next Auth for authentication",
     image: "/images/GameStore.png",
     tags: ["NextJS", "ReactJS", "JavaScript", "MongoDB"],
     source: "https://github.com/Swoyen/nextjs-acquire",
     visit: "https://nextjs-acquire.vercel.app",
     id: 1,
     important: true,
+  },
+  {
+    title: "Royal Musk Website",
+    description: "Landing page for royal musk supplies distributor website",
+    image: "/images/RoyalMusk.JPG",
+    tags: ["AngularJS"],
+    source: "https://royalmusksupplies.com.au/",
+    visit: "https://royalmusksupplies.com.au/",
+    id: 4,
   },
   {
     title: "Bug Tracker",
@@ -21,17 +30,17 @@ export const projects = [
     id: 0,
   },
 
-  {
-    title: "Covid Tracker",
-    description:
-      "This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.",
-    image: "/images/placeholder.jpg",
-    tags: ["React", "WebRTC"],
-    source: "https://google.com",
-    visit: "https://google.com",
-    status: "inProgress",
-    id: 2,
-  },
+  // {
+  //   title: "Covid Tracker",
+  //   description:
+  //     "This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.",
+  //   image: "/images/placeholder.jpg",
+  //   tags: ["React", "WebRTC"],
+  //   source: "https://google.com",
+  //   visit: "https://google.com",
+  //   status: "inProgress",
+  //   id: 2,
+  // },
   {
     title: "Portfolio v1",
     description:
@@ -43,7 +52,6 @@ export const projects = [
     id: 3,
   },
 ];
-
 export const TimeLineData = [
   { year: 2017, text: "Started my journey" },
   { year: 2018, text: "Worked as a freelance developer" },
@@ -60,6 +68,15 @@ export const accomplishments = [
 ];
 
 export const workandeducation = [
+  {
+    title: "Full-Stack Software Development",
+    company: "Surity Pty Ltd.",
+    tasks: "Full-stack Software Development",
+    tools: "Angular, Nx, Git, .NET",
+    date: "2022",
+    type: "job",
+    id: "6",
+  },
   {
     title: "Software Engineer, Research Assistant",
     company: "University of South Australia",

@@ -1,15 +1,15 @@
 import React from "react";
-import { DiFirebase, DiReact, DiZend } from "react-icons/di";
+import { DiReact } from "react-icons/di";
 
 import {
-  SiNextDotJs,
-  SiVueDotJs,
-  SiDotNet,
+  SiDotnet,
+  SiGithub,
   SiLaravel,
   SiMysql,
-  SiGithub,
-  SiUnity,
+  SiNextdotjs,
   SiPython,
+  SiUnity,
+  SiVuedotjs,
 } from "react-icons/si";
 import {
   Section,
@@ -43,10 +43,10 @@ const Technologies = () => (
             <DiReact size="4rem" />
           </ListIcon>
           <ListIcon>
-            <SiNextDotJs size="4rem" />
+            <SiNextdotjs size="4rem" />
           </ListIcon>
           <ListIcon>
-            <SiVueDotJs size="4rem" />
+            <SiVuedotjs size="4rem" />
           </ListIcon>
         </ListIcons>
         <ListContainer>
@@ -62,7 +62,7 @@ const Technologies = () => (
       <ListItem>
         <ListIcons>
           <ListIcon>
-            <SiDotNet size="4rem" />
+            <SiDotnet size="4rem" />
           </ListIcon>
           <ListIcon>
             <SiLaravel size="4rem" />

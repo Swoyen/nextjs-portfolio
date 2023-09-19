@@ -1,3 +1,3 @@
 ## personal portfolio
 
-help me please
+help me please. im stuck

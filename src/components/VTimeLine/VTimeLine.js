@@ -92,9 +92,7 @@ const VTimeLine = () => {
       </VerticalTimeline>
       <Button
         style={{ marginTop: "20px" }}
-        onClick={() =>
-          window.open("/files/Resume Swoyen Suwal.pdf", "_blank").focus()
-        }
+        onClick={() => window.open("/files/resume.pdf", "_blank").focus()}
       >
         <AiOutlineDownload />
         <span style={{ marginLeft: "5px" }}> Resume</span>

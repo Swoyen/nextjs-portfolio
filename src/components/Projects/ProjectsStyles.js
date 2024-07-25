@@ -93,7 +93,9 @@ export const BlogCard = styled.div`
     box-shadow: 0px 0px 20px rgba(80, 78, 78, 1);
     transition: all 0.5s;
   }
-
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   :hover ${Img} {
     width: 110%;
     height: 110%;

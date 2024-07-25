@@ -13,10 +13,10 @@ export const projects = [
   {
     title: "Royal Musk Website",
     description: "Landing page for royal musk supplies distributor website",
-    image: "/images/RoyalMusk.JPG",
+    image: "/images/royalmusk.png",
     tags: ["AngularJS"],
-    source: "https://royalmusksupplies.com.au/",
-    visit: "https://royalmusksupplies.com.au/",
+    source: "https://royalmusk.com.au/",
+    visit: "https://royalmusk.com.au/",
     id: 4,
   },
   {
@@ -29,18 +29,6 @@ export const projects = [
     visit: "https://bugissuetracker.netlify.app/",
     id: 0,
   },
-
-  // {
-  //   title: "Covid Tracker",
-  //   description:
-  //     "This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.",
-  //   image: "/images/placeholder.jpg",
-  //   tags: ["React", "WebRTC"],
-  //   source: "https://google.com",
-  //   visit: "https://google.com",
-  //   status: "inProgress",
-  //   id: 2,
-  // },
   {
     title: "Portfolio v1",
     description:

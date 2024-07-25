@@ -58,6 +58,7 @@ export const List = styled.ul`
 export const ListContainer = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 
   @media ${(props) => props.theme.breakpoints.sm} {
     display: flex;
@@ -109,6 +110,7 @@ export const ListItem = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 2rem;
 
   box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
   border-radius: 10px;
